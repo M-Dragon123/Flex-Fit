@@ -31,7 +31,7 @@
 4. **配置自定义域名（可选）**
    - 在Render dashboard中点击你的站点
    - 进入 "Settings" → "Custom Domains"
-   - 添加你的域名（如 mlj88.top）
+   - 添加你的域名（如 malongjie.top）
    - 按照提示配置DNS记录
 
 ### 方法二：使用render.yaml自动配置
@@ -84,7 +84,7 @@ vercel --prod
    - 提交sitemap：`https://your-domain.com/sitemap.xml`
 
 2. **更新sitemap.xml中的域名**
-   - 将所有 `mlj88.top` 替换为你的实际域名
+   - 将所有 `malongjie.top` 替换为你的实际域名
 
 3. **配置Google Analytics**（可选）
    - 在所有页面添加GA追踪代码
