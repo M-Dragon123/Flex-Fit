@@ -1,0 +1,156 @@
+openapi: 3.0.0
+info:
+  title: Flex-Fit API
+  version: 1.0.0
+paths:
+  /users/{id}:
+    get:
+      summary: Get user information
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    put:
+      summary: Update user information
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Successful update
+    delete:
+      summary: Delete user information
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Successful deletion
+  /users/{id}/activities:
+    get:
+      summary: Get all activities for a user
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity'
+    post:
+      summary: Add a new activity
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Activity'
+      responses:
+        '201':
+          description: Activity created
+  /users/{id}/activities/{activityId}:
+    put:
+      summary: Update an activity
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Activity'
+      responses:
+        '200':
+          description: Activity updated
+    delete:
+      summary: Delete an activity
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: activityId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Activity deleted
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        age:
+          type: integer
+        gender:
+          type: string
+        height:
+          type: number
+        weight:
+          type: number
+    Activity:
+      type: object
+      properties:
+        activityId:
+          type: string
+        date:
+          type: string
+          format: date
+        type:
+          type: string
+        duration:
+          type: number
+        calories:
+          type: number 
