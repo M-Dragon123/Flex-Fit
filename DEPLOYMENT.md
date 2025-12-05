@@ -1,8 +1,60 @@
 # FlexFit 部署指南
 
-## Render 部署步骤
+## Vercel 部署步骤（强烈推荐）
 
-### 方法一：Static Site（推荐，免费）
+### 为什么选择Vercel？
+- ✅ **不会休眠** - 24/7在线，访问秒开
+- ✅ **全球CDN** - 访问速度极快
+- ✅ **SEO友好** - 不会因休眠影响搜索引擎抓取
+- ✅ **部署简单** - 一键部署
+- ✅ **免费额度大** - 100GB带宽/月
+
+### 方法一：通过Vercel网站部署（最简单）
+
+1. **访问Vercel**
+   - 打开 https://vercel.com
+   - 用GitHub账号登录
+
+2. **导入项目**
+   - 点击 "Add New..." → "Project"
+   - 选择 `M-Dragon123/Flex-Fit` 仓库
+   - 点击 "Import"
+
+3. **配置项目**
+   - **Project Name**: flexfit（或你喜欢的名字）
+   - **Framework Preset**: Other（静态HTML）
+   - **Root Directory**: ./
+   - **Build Command**: 留空
+   - **Output Directory**: ./
+   - 点击 "Deploy"
+
+4. **等待部署完成**
+   - 通常10-30秒就完成
+   - 会得到一个URL：`https://flexfit.vercel.app`
+
+5. **配置自定义域名**
+   - 在项目设置中点击 "Domains"
+   - 添加 `malongjie.top` 和 `www.malongjie.top`
+   - 按照提示配置DNS
+
+### 方法二：使用Vercel CLI
+
+```bash
+# 安装Vercel CLI
+npm install -g vercel
+
+# 登录
+vercel login
+
+# 部署
+vercel --prod
+```
+
+---
+
+## Render 部署步骤（备选方案，会休眠）
+
+### 方法一：Static Site（免费但会休眠）
 
 1. **准备Git仓库**
    ```bash
