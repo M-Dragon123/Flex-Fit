@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://malongjie.top/sitemap.xml
+Sitemap: https://www.malongjie.top/sitemap.xml
