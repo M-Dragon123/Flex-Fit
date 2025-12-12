@@ -1,5 +1,11 @@
 # FlexFit - AI-Powered Fitness Platform
 
+# FlexFit - AI-Powered Fitness Platform
+
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fwww.malongjie.top)](https://www.malongjie.top)
+
+**🌐 Live Demo / Official Website:** [https://www.malongjie.top](https://www.malongjie.top)
+
 FlexFit is an AI-powered fitness training platform offering personalized workout plans, real-time motion recognition, and a supportive community.
 
 ## Features
