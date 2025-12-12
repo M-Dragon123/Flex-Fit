@@ -1,4 +1,3 @@
-# FlexFit - AI-Powered Fitness Platform
 
 # FlexFit - AI-Powered Fitness Platform
 
